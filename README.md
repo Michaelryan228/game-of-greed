@@ -1,6 +1,6 @@
 # Game of Greed
 
-by [Daniel Dills](https://github.com/danieldills), [Michael Ryan](https://github.com/Michaelryan228), and [Matt Santorsola](https://github.com/santorsm)
+by [Daniel Dills](https://github.com/danieldills), [Michael Ryan](https://github.com/Michaelryan228), [Matt Santorsola](https://github.com/santorsm), and [Kassie Bradshaw](https://github.com/kassiebradshaw)
 
 ## Summary
 
