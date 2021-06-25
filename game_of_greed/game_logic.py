@@ -1,11 +1,14 @@
 import random
 from collections import Counter
 
+die_value = {1: 100, 5: 50}
+three_set = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
+
 class GameLogic:
 
   def __init__(self):
-      pass
-
+    pass
+  
   @staticmethod
   def roll_dice(num_of_dice):
     """
