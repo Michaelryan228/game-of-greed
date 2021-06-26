@@ -1,8 +1,8 @@
 import random
 from collections import Counter
 
-die_value = {1: 100, 5: 50}
-three_set = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
+SINGLE_VALUE = {1: 100, 5: 50}
+THREE_OF_A_KIND = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
 
 class GameLogic:
 
@@ -10,23 +10,36 @@ class GameLogic:
     pass
 
   @staticmethod
-  def calculate_score(tuple):
-    counter = Counter(tuple)
-    if len(counter) == 6:
+  def calculate_score(roll):
+    
+    """
+    input = tupple of dice we rolled.
+    output = score based on the roll.
+    """
+    roll_counter = Counter(roll)
+    if len(roll_counter) == 6:
+      #this represents a straight
       return 1500
-    if len(Counter) == 3:
-      if all(value == 2 for value in counter.values()):
+    if len(roll_counter) == 3:
+      if all(value == 2 for value in roll_counter.values()):
+        #this line represents 3 pairs
         return 1500
 
     score = 0
 
-    for num, counter in counter.items():
+    for num, counter in roll_counter.items():
       if counter < 3:
-        score += counter 
+        score += counter * SINGLE_VALUE.get(num, 0)
+      elif counter == 3:
+        score += THREE_OF_A_KIND[num]
+      elif counter == 4:
+        score += THREE_OF_A_KIND[num] * 2
+      elif counter == 5:
+        score += THREE_OF_A_KIND[num] * 3
+      elif counter == 6:
+        score += THREE_OF_A_KIND[num] * 4
 
-
-    thistuple = ("1", "2", "3", "4", "5", "6")
-    print(thistuple)
+    return score
 
   @staticmethod
   def roll_dice(roll_num):
@@ -35,15 +48,8 @@ class GameLogic:
       rolled.append(random.randint(1,6))
     return tuple(rolled)
 
-class Banker:
-  
-  def shelf():
-    pass
+if __name__ == "__main__":
 
-  def bank():
-    pass
-
-  def clear_shelf():
-    pass
-
-
+  input = (1, 1, 1, 1, 1, 1)
+  score = GameLogic.calculate_score(input)
+  print(score)
