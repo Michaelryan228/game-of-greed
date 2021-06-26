@@ -18,6 +18,8 @@ Create a command line version of the dice game Game of Greed by expanding your u
 
 - [Farkle example](https://searchcode.com/codesearch/view/85878038/)
 
+- Credit to Davee Sok for calculate score function
+
 ## Implementation Notes
 
 - [Rules of the game](https://en.wikipedia.org/wiki/Dice_10000)

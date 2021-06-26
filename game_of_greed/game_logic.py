@@ -1,64 +1,49 @@
 import random
 from collections import Counter
 
-die_value = {1: 100, 5: 50}
-three_set = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
+SINGLE_VALUE = {1: 100, 5: 50}
+THREE_OF_A_KIND = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
 
 class GameLogic:
 
   def __init__(self):
     pass
-  
-  @staticmethod
-  def roll_dice(num_of_dice):
-    """
-    Randomly generates roll.
-    """
-    rolled = []
-    for i in range(num_of_dice):
-      rolled.append(random.randint(1,6))
-    return tuple(rolled)
-  
-  @staticmethod
-  def calculate_score(rolled):
-    """
-    Calculates score of each roll.
-    """
-    score = 0
-    # Return a list of the n most common elements and their counts from the most common to the least.
-    dice_rolled_counter = Counter(rolled)
-    most_common_rolled = Counter(dice_rolled_counter).most_common()
-    unique_dice = len(most_common_rolled)
-    most_rolled_number = most_common_rolled[0][1]
-    occurrences = most_common_rolled[0][1] 
-    
-    
-    single_values = {1:100, 5:50}
-    if unique_dice == 6:
-      score += 1500
-    if unique_dice == 3 and most_common_rolled[0][1] == 2 and most_common_rolled[1][1] == 2:
-      score += 1500
-    
-    if occurrences == 3:
-      score += most_rolled_number*100
-    if occurrences == 4:
-      score += most_rolled_number*200
-    if occurrences == 5:
-      score += most_rolled_number*300
-    if occurrences == 6:
-      if most_rolled_number == 1:
-        score += 4000
-      else:
-        score += most_rolled_number*400
 
-    # for dice in most_common_rolled:
-    #   if dice[0] == 1:
-    #     score += dice[1]*100
-    #   if dice[0] == 5:
-    #     score += dice[1]*50
-    for key in dice_rolled_counter:
-      if key == 1 or key == 5:
-        # print(key, '->', dice_rolled_counter[key]*single_values[key])
-        score += dice_rolled_counter[key]*single_values[key]
+  @staticmethod
+  def calculate_score(roll):
+    
+    """
+    input = tupple of dice we rolled.
+    output = score based on the roll.
+    """
+    roll_counter = Counter(roll)
+    if len(roll_counter) == 6:
+      #this represents a straight
+      return 1500
+    if len(roll_counter) == 3:
+      if all(value == 2 for value in roll_counter.values()):
+        #this line represents 3 pairs
+        return 1500
+
+    score = 0
+
+    for num, counter in roll_counter.items():
+      if counter < 3:
+        score += counter * SINGLE_VALUE.get(num, 0)
+      elif counter == 3:
+        score += THREE_OF_A_KIND[num]
+      elif counter == 4:
+        score += THREE_OF_A_KIND[num] * 2
+      elif counter == 5:
+        score += THREE_OF_A_KIND[num] * 3
+      elif counter == 6:
+        score += THREE_OF_A_KIND[num] * 4
 
     return score
+
+  @staticmethod
+  def roll_dice(roll_num):
+    rolled = []
+    for i in range(roll_num):
+      rolled.append(random.randint(1,6))
+    return tuple(rolled)
