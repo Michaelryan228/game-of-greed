@@ -47,9 +47,3 @@ class GameLogic:
     for i in range(roll_num):
       rolled.append(random.randint(1,6))
     return tuple(rolled)
-
-if __name__ == "__main__":
-
-  input = (1, 1, 1, 1, 1, 1)
-  score = GameLogic.calculate_score(input)
-  print(score)

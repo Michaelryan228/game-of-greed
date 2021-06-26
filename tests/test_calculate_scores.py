@@ -3,25 +3,23 @@ from game_of_greed.game_logic import GameLogic
 
 pytestmark = [pytest.mark.version_1]
 
-
+@pytest.mark.skip("pending")
 def test_single_five():
     actual = GameLogic.calculate_score((5,))
     expected = 50
     assert actual == expected
-
 
 def test_single_one():
     actual = GameLogic.calculate_score((1,))
     expected = 100
     assert actual == expected
 
-
 def test_two_fives():
     actual = GameLogic.calculate_score((5, 5))
     expected = 100
     assert actual == expected
 
-
+# @pytest.mark.skip("pending")
 def test_two_ones():
     actual = GameLogic.calculate_score((1, 1))
     expected = 200
@@ -32,7 +30,6 @@ def test_one_and_five():
     actual = GameLogic.calculate_score((1, 5))
     expected = 150
     assert actual == expected
-
 
 def test_zilch():
     actual = GameLogic.calculate_score((2,))
@@ -92,7 +89,6 @@ def test_six_ones():
     actual = GameLogic.calculate_score((1, 1, 1, 1, 1, 1))
     expected = 4000
     assert actual == expected
-
 
 @pytest.mark.parametrize(
     "test_input,expected",
