@@ -12,6 +12,8 @@ Create a command line version of the dice game Game of Greed by expanding your u
 
 ## Feature Task and Requirements
 
+**LAB 06**:
+
 - Today is all about tackling the highest risk and/or highest priority features - scoring, dice rolling and banking of points.
   - [x] Define a `GameLogic` class in `game_of_greed/game_logic.py` file
   - [x] Handle calculating score for dice roll
@@ -33,6 +35,16 @@ Create a command line version of the dice game Game of Greed by expanding your u
       - [x] `bank` output should be the amount of points added to total from shelf
     - [x] Add a `clear_shelf` instance method
       - [x] `clear_shelf` should remove all unbanked points
+
+**LAB 07**:
+
+- [ ] Application should implement all features from previous version
+- [ ] App should simulate rolling between 1 and 6 dice
+- [ ] App should allow user to set aside dice each roll
+- [ ] App should allow "banking" current score or rolling again
+- [ ] App should keep track of total score
+- [ ] App should keep track of current round
+- [x] App should have automated tests to ensure proper operation
 
 ## References & Links
 
