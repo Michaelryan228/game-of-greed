@@ -1,8 +1,7 @@
 import random
 from collections import Counter
 
-SINGLE_VALUE = {1: 100, 5: 50}
-THREE_OF_A_KIND = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
+
 
 class GameLogic:
 
@@ -11,11 +10,14 @@ class GameLogic:
 
   @staticmethod
   def calculate_score(roll):
-    
     """
-    input = tupple of dice we rolled.
+    input = tuple of dice we rolled.
     output = score based on the roll.
     """
+
+    SINGLE_VALUE = {1: 100, 5: 50}
+    THREE_OF_A_KIND = {1: 1000, 2: 200, 3: 300, 4: 400, 5: 500, 6: 600}
+    
     roll_counter = Counter(roll)
     if len(roll_counter) == 6:
       #this represents a straight
