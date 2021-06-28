@@ -37,6 +37,7 @@ Create a command line version of the dice game Game of Greed by expanding your u
       - [x] `clear_shelf` should remove all unbanked points
 
 **LAB 07**:
+[PR for this lab](https://github.com/Michaelryan228/game-of-greed/pull/10)
 
 - [ ] Application should implement all features from previous version
 - [ ] App should simulate rolling between 1 and 6 dice
@@ -45,6 +46,8 @@ Create a command line version of the dice game Game of Greed by expanding your u
 - [ ] App should keep track of total score
 - [ ] App should keep track of current round
 - [x] App should have automated tests to ensure proper operation
+
+
 
 ## References & Links
 
