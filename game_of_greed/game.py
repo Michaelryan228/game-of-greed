@@ -9,8 +9,9 @@ class Game:
     self.dice_left = 6
 
 
-  def play(self, roller):
-    self.roller = roller or GameLogic.roll_dice
+  def play(self, roller=GameLogic.roll_dice):
+    # Use roller(dice) wherever we need to roll dice.
+    # self.roller = roller or GameLogic.roll_dice
     # help w/ this from Anthony Beaver
     # self.roller can be whatever we input as roller
     # OR it can call the static function from GameLogic
