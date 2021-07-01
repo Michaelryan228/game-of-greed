@@ -1,4 +1,4 @@
-import random
+from random import randint
 from collections import Counter
 
 
@@ -43,9 +43,18 @@ class GameLogic:
 
     return score
 
+  # def roll_dice(roll_num):
+  #   rolled = []
+  #   for i in range(roll_num):
+  #     rolled.append(random.randint(1,6))
+  #   return tuple(rolled)
+
   @staticmethod
-  def roll_dice(roll_num):
-    rolled = []
-    for i in range(roll_num):
-      rolled.append(random.randint(1,6))
-    return tuple(rolled)
+  def to_str(dice_rolled):
+    printed_results = ''
+    for char in dice_rolled:
+        printed_results += f'{char} '
+    return(printed_results)
+
+  def roll_dice(dnum = 6):
+    return tuple([randint(1, 6) for _ in range(dnum)])

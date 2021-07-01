@@ -47,8 +47,6 @@ Create a command line version of the dice game Game of Greed by expanding your u
 - [ ] App should keep track of current round
 - [x] App should have automated tests to ensure proper operation
 
-
-
 ## References & Links
 
 - [Farkle example](https://searchcode.com/codesearch/view/85878038/)
