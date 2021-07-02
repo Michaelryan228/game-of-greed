@@ -4,10 +4,6 @@ Authors: [Daniel Dills](https://github.com/danieldills), [Michael Ryan](https://
 
 ## Summary
 
-Lab 06: Game of Greed I
-
-## Overview
-
 Create a command line version of the dice game Game of Greed by expanding your understanding of Python standard library.
 
 ## Feature Task and Requirements
@@ -39,13 +35,28 @@ Create a command line version of the dice game Game of Greed by expanding your u
 **LAB 07**:
 [PR for this lab](https://github.com/Michaelryan228/game-of-greed/pull/10)
 
-- [ ] Application should implement all features from previous version
-- [ ] App should simulate rolling between 1 and 6 dice
-- [ ] App should allow user to set aside dice each roll
-- [ ] App should allow "banking" current score or rolling again
-- [ ] App should keep track of total score
-- [ ] App should keep track of current round
+- [x] Application should implement all features from previous version
+- [x] App should simulate rolling between 1 and 6 dice
+- [x] App should allow user to set aside dice each roll
+- [x] App should allow "banking" current score or rolling again
+- [x] App should keep track of total score
+- [x] App should keep track of current round
 - [x] App should have automated tests to ensure proper operation
+
+**LAB 08**:
+[PR for this lab](tbd)
+
+The game should now be close to playable - for honest players at least. Let's shore up the core functionality of the game by allowing users to set aside scoring dice and continuing their turn. Then we'll handle cheaters and/or confused players who are skirting the rules.
+
+- [ ] Application should implement features from versions 1 and 2
+- [ ] Should handle setting aside scoring dice and continuing turn with remaining dice
+- [ ] Should handle when cheating occurs
+  - Or just typos
+  - E.g. roll = `[1, 3, 5, 2]` and user selects `1, 1, 1, 1, 1, 1`
+- [ ] Should allow user to continue rolling with 6 new dice when all dice have scored in current turn
+- [ ] Handle **zilch**
+  - [ ] No points for round, and round is over
+- [ ] If you have questions, refer to game rules, the online game or ask the client (aka Instructor)
 
 ## References & Links
 
