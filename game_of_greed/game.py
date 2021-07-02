@@ -70,6 +70,7 @@ class Game:
         self.round += 1
         self.dice_left = 6
 
+
 # ------------------------------- TA TIPS-------------------------------
 
 # set number of dice to a variable --> like: start_dice = 6
