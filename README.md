@@ -56,7 +56,7 @@ The game should now be close to playable - for honest players at least. Let's sh
 - [ ] Should allow user to continue rolling with 6 new dice when all dice have scored in current turn
 - [ ] Handle **zilch**
   - [ ] No points for round, and round is over
-- [ ] If you have questions, refer to game rules, the online game or ask the client (aka Instructor)
+- [ ] If you have questions, refer to game rules, the online game or ask the client (aka the Instructor)
 
 ## References & Links
 
